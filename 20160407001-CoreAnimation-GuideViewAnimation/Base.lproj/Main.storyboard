@@ -1,25 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="520_userguid_person_taitou_1" translatesAutoresizingMaskIntoConstraints="NO" id="08w-jn-7vr">
+                                <rect key="frame" x="113" y="436" width="148" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="rQn-nr-beY"/>
+                                    <constraint firstAttribute="width" constant="148" id="rzS-jT-iWU"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="520_userguid_sun" translatesAutoresizingMaskIntoConstraints="NO" id="kfn-J9-bGa">
+                                <rect key="frame" x="275" y="40" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Afa-Cs-AK8"/>
+                                    <constraint firstAttribute="width" constant="100" id="Xoj-cI-w12"/>
+                                    <constraint firstAttribute="height" constant="100" id="cLr-jL-Vhc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kfn-J9-bGa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="2aN-gm-UdG"/>
+                            <constraint firstAttribute="trailing" secondItem="kfn-J9-bGa" secondAttribute="trailing" id="6XE-Ex-5JJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="08w-jn-7vr" secondAttribute="bottom" constant="75" id="O8V-aB-sbI"/>
+                            <constraint firstItem="08w-jn-7vr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lLH-lw-WwH"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="personImageView" destination="08w-jn-7vr" id="vFr-eh-7i1"/>
+                        <outlet property="sunImageView" destination="kfn-J9-bGa" id="FaE-VG-mm0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="244.5" y="234.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="520_userguid_person_taitou_1" width="380" height="362"/>
+        <image name="520_userguid_sun" width="250" height="250"/>
+    </resources>
 </document>
